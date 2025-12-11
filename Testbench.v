@@ -24,7 +24,7 @@ initial begin
     for (i = 0; i < 1024; i = i + 1)
         CPU.Instruction_Memory.memory[i] = 32'h00000013;
 
-    $readmemb("instruction.txt", CPU.Instruction_Memory.memory);
+    $readmemb("testcase/instruction.txt", CPU.Instruction_Memory.memory);
 
     #(`CYCLE_TIME/4) rst = 0;
 end
